@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Ahmed Jamal <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
+- **Dot Number**: Jamal.44<!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
+- **Due Date**: 2/4/25<!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +98,15 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I am a pretty producitve person and I love to spend time with family and friends. I love to play cricket and watch as well as I go to the gym a couple times a week. I am a pretty simple dude.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -131,8 +115,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +182,80 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: ToDoList
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    A list type compoennet that has a list of items that a user needs to complete
+    Im planning for it to be a sequence with a map.pair in each element. this will store the
+    task as the key and the due date as the value and it will sort the sequence by due date everytiem something is added. if the due dates match then it will sort them in alphabetical order.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    addTask - add a task with due date `Void addTask(int p, Map.Pair<String t, String d>)` // the add method sorts by due date when called and alphabetically if due dates match
+    removeTask - remove an item from the list `Map.Pair<String,String> removeTask(K t)`
+    lengthOfList - length of the list `int lengthOfList()`
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    entryCheck - reports the entry in a certain position `Map.Pair<String,String> entryCheck(int p)`
+    replace - replaces the entry at a psoition `Void replace(int p, Map.Pair<String s, String d>)`
+    changeDueDate - changes the due date for a certain pair `Void changeDueDate(int p, String d)`
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      yes, it would be hard to make it unmutable. it inherits the standard interface so i would assume it is mutable. also im planning on using comparable interface as well.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      yes im planning to have map.pairs in each position of a sequence.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      i don't know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      Yes, like replace will just use remove and then adds a different pair in.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: GrocShopList
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    Grocery Shopping List
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    add - Add an item (name, qty) `Void add(int p, Map.Pair<String s, Integer c>)`
+    remove - remove an item `Map.Pair<String, Integer> remove(K s)`
+    length - length of the list `int length()`
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    changeQty - changes the quantity of an item `Void changeQty(int p, V qty)`
+    replace - replaces the item at a psoition `Void replace(int p, Map.Pair<String s, String d>)`
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      it needs to be mutable and it will inherit the standard interface
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      Answer and explain: yes, just like the last one i will use Map.pair here, not sure if any others are required as of now
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      i dont know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      Yes, its a similar implementation as the last one, but ill use a different example
+      for changeQty i just use the remove method and add it with the new value
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: EmployeeTracker
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Keeps track of the number of employees at a certain company or group. its a Stack with map elements
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - pushEmp - adds an employee (Name, Date Joined) `Void pushEmp(Map.Pair<String n, String d>)`
+    - popEmp - removes an employee `Map.Pair<String, String> popEmp()`
+    - length - length of the list `int length()`
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - newestEmp - reports the newest employee `Map.Pair<String, String> newestEmp()`
+    - flip - flip stack to see older employees `Void flip()`
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, just like the last two
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, I will use Map.pair here, not sure if any others are needed
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, ill give an explanation on how to do newestEmp. just remove the emp, make a copy then add it back. rteurn it to the user. I havent really thought on how to do flip just yet.
 
 ## Post-Assignment
 
@@ -292,9 +286,9 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed a ToDoList component
+- Designed a GrocShopList component
+- Designed a EmployeeTracker component
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
