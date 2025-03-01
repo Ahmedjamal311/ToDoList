@@ -35,12 +35,12 @@ public final class ProofOfConcept {
     /**
      * Adds an array of two strings on being the task ad one being the due date.
      *
-     * @param description
+     * @param task
      *            the string of the task that needs to be added
      * @updates this
      */
-    public void addTask(Task description) {
-        this.list.enqueue(description);
+    public void addTask(Task task) {
+        this.list.enqueue(task);
         this.list.sort(new Comparator<Task>() {
             @Override
             public int compare(ProofOfConcept.Task o1, ProofOfConcept.Task o2) {
@@ -116,6 +116,25 @@ public final class ProofOfConcept {
         return answer;
     }
 
+    /**
+     * reports what entry is at a the given index.
+     *
+     * @param index
+     *            is the index of the task
+     * @return the task at the given index
+     */
+    public Task entryCheck(int index) {
+        this.list.rotate(index);
+        Task task = this.list.front();
+        this.list.sort(new Comparator<Task>() {
+            @Override
+            public int compare(ProofOfConcept.Task o1, ProofOfConcept.Task o2) {
+                return o1.date().compareTo(o2.date());
+            }
+        });
+        return task;
+    }
+
     @Override
     public String toString() {
         return this.list.toString();
@@ -146,6 +165,7 @@ public final class ProofOfConcept {
         String descriptionCheck = list.descriptionCheck(0);
         LocalDate dateCheck = list.dateCheck(0);
 
+        System.out.println(list.entryCheck(2)); //Should print "bye" entry
         System.out.println(removed); //Should print "Hi, 2025,2,27"
         System.out.println(descriptionCheck); //Should print "Trash"
         System.out.println(dateCheck); //Should print 2025,2,20

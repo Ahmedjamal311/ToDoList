@@ -20,5 +20,5 @@ the following form: YYYY.0M.0D.
 
 - Designed a proof of concept for ToDoList component
 - updated secondary method slightly
-- now they are taskCheck, dateCheck,
+- now they are taskCheck, dateCheck, and entryCheck
 - the remove task kernel now removes at any index
