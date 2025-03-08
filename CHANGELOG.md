@@ -8,7 +8,7 @@ the following form: YYYY.0M.0D.
 
 ## 2025.02.16
 
-### Added1
+### Added (Brainstorming)
 
 - Designed a ToDoList component
 - Designed a GrocShopList component
@@ -16,9 +16,14 @@ the following form: YYYY.0M.0D.
 
 ## 2025.02.20
 
-### Added2
+### Added (Proof of Concept)
 
-- Designed a proof of concept for ToDoList component
-- updated secondary method slightly
-- now they are taskCheck, dateCheck, and entryCheck
-- the remove task kernel now removes at any index
+- Coded all my kernel and secondary methods for to do list component
+- Kernel methods: addTask, removeTask, and length
+- standard methods: descriptionCheck, dateCheck, and entryCheck
+
+## 2025.03.05
+
+### Added (Interface)
+
+- Wrote method headers and contracts for kernel and secondary methods
