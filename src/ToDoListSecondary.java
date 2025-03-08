@@ -30,7 +30,7 @@ public interface ToDoListSecondary extends ToDoListKernel {
      * @param index
      *            is the index of the task
      * @requires index <= the length of this
-     * @ensures the value returns a LocalDate) at the given index
+     * @ensures the value returns a LocalDate at the given index
      * @return a Localdate at the given index
      */
     LocalDate dateCheck(int index);
