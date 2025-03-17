@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.Queue;
 
 import components.standard.Standard;
 
@@ -15,7 +14,7 @@ record Task(String description, LocalDate date) {
 /**
  *
  */
-public interface ToDoListKernel extends Standard<Queue<Task>> {
+public interface ToDoListKernel extends Standard<ToDoList> {
 
     /**
      * Adds an array of two strings on being the task ad one being the due date.
