@@ -12,7 +12,7 @@ record Task(String description, LocalDate date) {
 /**
  *
  */
-public interface ToDoListSecondary extends ToDoListKernel {
+public interface ToDoList extends ToDoListKernel {
     /**
      * reports what description is at a the given index.
      *
