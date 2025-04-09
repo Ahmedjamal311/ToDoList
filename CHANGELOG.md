@@ -33,3 +33,9 @@ the following form: YYYY.0M.0D.
 ### Added (Abstract Class)
 
 - Designed the abstract class and implemented two object methods toString and Equals()
+
+## 2025.04.08
+
+### Added (Kernel Implementation Class)
+
+- Implemented the Kernel methods
