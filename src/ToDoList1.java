@@ -23,7 +23,7 @@ public final class ToDoList1 extends ToDoListSecondary {
      * Adds an array of two strings on being the task ad one being the due date.
      *
      * @param task
-     *            the string of the task that needs to be added
+     *             the string of the task that needs to be added
      * @updates this
      */
     @Override
@@ -41,7 +41,7 @@ public final class ToDoList1 extends ToDoListSecondary {
      * removes the (task, due date) from the list from a certain index.
      *
      * @param index
-     *            the index
+     *              the index
      * @return a task object with task and date
      * @updates this
      */
@@ -72,7 +72,7 @@ public final class ToDoList1 extends ToDoListSecondary {
      * transfers the information from copy to this and clears copy.
      *
      * @param copy
-     *            the list we want to copy from
+     *             the list we want to copy from
      */
     @Override
     public void transferFrom(Queue<Task> copy) {
