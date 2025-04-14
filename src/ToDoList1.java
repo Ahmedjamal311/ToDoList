@@ -71,23 +71,14 @@ public final class ToDoList1 extends ToDoListSecondary {
     /**
      * transfers the information from copy to this and clears copy.
      *
-     * @param copy
+     * @param source
      *             the list we want to copy from
      */
     @Override
-    public void transferFrom(ToDolist1(Queue<Task>) copy) {
-        this.list.clear();
-        while (copy.length() > 0) {
-            Task removed = copy.dequeue();
-            this.list.enqueue(removed);
-            this.list.sort(new Comparator<Task>() {
-                @Override
-                public int compare(Task o1, Task o2) {
-                    return o1.date().compareTo(o2.date());
-                }
-            });
-        }
-        copy.clear();
+    public void transferFrom(ToDoList source) {
+        ToDoList1 localSource = (ToDoList1) source;
+        this.list = localSource.list;
+        localSource.createNewRep();
     }
 
     /**
@@ -95,16 +86,26 @@ public final class ToDoList1 extends ToDoListSecondary {
      */
     @Override
     public void clear() {
-        while (this.list.length() > 0) {
-            this.list.dequeue();
-        }
+        this.createNewRep();
     }
 
     /**
      * creates a new instance of this.
      */
     @Override
-    public ToDoList1 newInstance() {
-        return new ToDoList1();
+    public ToDoList newInstance() {
+        try {
+            return this.getClass().getConstructor().newInstance();
+        } catch (ReflectiveOperationException e) {
+            throw new AssertionError(
+                    "Cannot construct object of type " + this.getClass());
+        }
+    }
+
+    /**
+     *
+     */
+    private void createNewRep() {
+        this.list = new Queue1L<>();
     }
 }
