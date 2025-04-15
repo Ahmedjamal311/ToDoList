@@ -4,7 +4,8 @@ import components.queue.Queue;
 import components.queue.Queue1L;
 
 /**
- *
+ * @convention tasks are always sorted by date (earliest to latest)
+ * @coresspondence the queue represents a to do list.
  */
 public final class ToDoList1 extends ToDoListSecondary {
     /**
@@ -72,7 +73,7 @@ public final class ToDoList1 extends ToDoListSecondary {
      * transfers the information from copy to this and clears copy.
      *
      * @param source
-     *             the list we want to copy from
+     *            the list we want to copy from
      */
     @Override
     public void transferFrom(ToDoList source) {
