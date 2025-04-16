@@ -70,6 +70,18 @@ public abstract class ToDoListSecondary implements ToDoList {
      */
     @Override
     public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+
+        if (this == o) {
+            return true;
+        }
+
+        if (!(o instanceof ToDoList)) {
+            return false;
+        }
+
         ToDoList t = (ToDoList) o;
         Boolean equals = true;
         if (!(this.length() == t.length())) {
@@ -82,7 +94,7 @@ public abstract class ToDoListSecondary implements ToDoList {
                     equals = false;
                 }
                 this.addTask(r1);
-                this.addTask(r2);
+                t.addTask(r2);
             }
         }
         return equals;

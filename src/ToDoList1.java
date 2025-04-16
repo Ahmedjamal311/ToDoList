@@ -16,7 +16,7 @@ public final class ToDoList1 extends ToDoListSecondary {
     /**
      *
      */
-    private ToDoList1() {
+    public ToDoList1() {
         this.list = new Queue1L<>();
     }
 
